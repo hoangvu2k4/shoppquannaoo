@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP QUẦN ÁO VŨ ĐẸP TRAI</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        header {
+            background-color: #589765;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around; /* Dùng để căn giữa các ô trong mỗi hàng */
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        article {
+            width: 40%;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(220, 23, 23, 0.1);
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px; /* Thêm khoảng cách giữa các ô */
+        }
+
+        article:hover {
+            transform: scale(1.05);
+        }
+
+        article img {
+            width: 70%;
+            height: auto;
+        }
+
+        article h2 {
+            color: #6eb60e;
+        }
+
+        article p {
+            color: #666;
+        }
+
+        article button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 550000px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+            float: right;
+            vertical-align: top; /* Đưa chữ "Mua Ngay" lên cao hơn */
+        }
+
+        article button:hover {
+            background-color: #140505a0;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #22c26a;
+            color: #afc470;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SHOP QUẦN ÁO VŨ ĐẸP TRAI KÍNH CHÀO QUÝ KHÁCH</h1>
+    </header>
+
+    <section>
+        <article>
+            <h2>Áo Polo Vàng</h2>
+            <img src="1.jpg" alt="Áo Polo Vàng">
+            <p>Áo polo trắng thời trang, phong cách và thoáng khí.</p>
+            <p>Giá: $25.99</p>
+            <a href="hang1.html"><button>Mua Ngay</button></a>
+        </article>
+
+        <article>
+            <h2>Quần Jean Nam</h2>
+            <img src="1.jpg" alt="Quần Jean Nam">
+            <p>Quần jean nam phong cách, thoải mái và bền bỉ.</p>
+            <p>Giá: $34.99</p>
+            <a href="hang2.html"><button>Mua Ngay</button></a>
+        </article>
+        <article>
+            <h2>Giày </h2>
+            <img src="4.jpg" alt="Quần Jean Nam">
+            <p>Giày siêu rẻ</p>
+            <p>Giá: 400.000Đ</p>
+            <a href="hang4.html"><button>Mua Ngay</button></a>
+        </article>
+
+        <article>
+            <h2>Áo len mùa đông</h2>
+            <img src="3.jpg" alt="Áo len">
+            <p>Áo len mùa đông giữ ấm.</p>
+            <p>Giá: $343.99</p>
+            <a href="hang3.html">
+                <img src="3.jpg" alt="Ảnh mới">
+                <button>Mua Ngay</button></a>   
+                
+        </article>
+        <!-- Thêm các sản phẩm khác tại đây -->
+    </section>
+
+</body>
+</html>
