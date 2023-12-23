@@ -9,8 +9,11 @@
     <title>Đăng ký - Hoàng Dương Vũ</title>
 </head>
 <body>
-    <form action="" class="form" id="form">
-        <div class="title">
+    <form id="form" class="form">
+        <form action="register.php" method="POST" class="form" id="form">
+      
+            <button type="button" onclick="register()">đăng ký</button>
+            <div class="title">
             <i class="fa-solid fa-user"></i>
             <h1>đăng ký</h1>
         </div>
@@ -26,40 +29,38 @@
         </div>
         <div class="enter-information">
             <label for="password" class="label">Nhập mật khẩu<sup>*</sup></label>
-            <input id="password" name="password" type="password" placeholder="Tên đăng nhập">
+            <input id="password" name="password" type="password" placeholder="Mật khẩu">
             <span class="message"></span>
         </div>
         <div class="enter-information">
             <label for="phone" class="label">Số điện thoại<sup>*</sup></label>
-            <input id="phone" name="phone" type="text" placeholder="Tên đăng nhập">
+            <input id="phone" name="phone" type="text" placeholder="Số điện thoại">
             <span class="message"></span>
         </div>
         <div class="enter-information">
             <label for="username" class="label">Họ và tên<sup>*</sup></label>
-            <input id="username" name="username" type="text" placeholder="Tên đăng nhập">
+            <input id="username" name="username" type="text" placeholder="Họ và tên">
             <span class="message"></span>
         </div>
         <button type="submit">đăng ký</button>
         <hr>
         <p>Khi click nút đăng ký, bạn đã đồng ý với <b>thỏa thuận sử dụng</b> của chúng tôi</p>
         <hr>
-     
-            <p>Bạn đã có tài khoản</p>
-            <a href="dangnhap.html">Đăng nhập</a>
-        </div>
+        <p>Bạn đã có tài khoản</p>
+        <a href="dangnhap.html">Đăng nhập</a>
     </form>
+    <script src="app.js"></script>
+    <script>
+        checkForm({
+            form: '#form',
+            rules: [
+                checkForm.isResquired('#fullname'),
+                checkForm.isEmail('#email'),
+                checkForm.isPassword('#password', 6),
+                checkForm.isPhone('#phone'),
+                checkForm.isUsername('#username'),
+            ]
+        });
+    </script>
 </body>
-<script src="app.js"></script>
-<script>
-    checkForm({
-        form: '#form',
-        rules: [
-            checkForm.isResquired('#fullname'),
-            checkForm.isEmail('#email'),
-            checkForm.isPassword('#password', 6),
-            checkForm.isPhone('#phone'),
-            checkForm.isUsername('#username'),
-        ]
-    });
-</script>
 </html>

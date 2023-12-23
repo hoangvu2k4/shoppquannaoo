@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP QUẦN ÁO HOÀNG VŨ</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        header {
+            background-color: #764f52;
+            color: #0e0606;
+            text-align: center;
+            padding: 10px;
+        }
+        
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        section1 {
+            border-radius: 8px; 
+            box-shadow: 0 0 10px rgba(220, 23, 23, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        article {
+            width: 40%;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1 1000px rgba(220, 23, 23, 0.1);
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
+            position: relative;
+            display: flex;
+        }
+
+        article:hover {
+            transform: scale(1.05);
+        }
+
+        article img {
+            width: 50%;
+            height: 100%;
+        }
+
+        article h2 {
+            color: #000000;
+        }
+
+        article p {
+            color: #666;
+        }
+
+        article button {
+            background-color: #f20d0d;
+            color: #fff;
+            padding: 11px;
+            border: none;
+            border-radius: 503px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+            position: absolute;
+            bottom: 10px;
+            right: 0;
+        }
+
+        article button:hover {
+            background-color: #140505a0;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #22c26a;
+            color: #afc470;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #balance-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #balance {
+            font-weight: bold;
+            color: #f20d0d;
+            font-size: 1.2em;
+        }
+
+        #deposit-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #deposit-input {
+            padding: 8px;
+            margin-right: 10px;
+        }
+
+        #deposit-button {
+            background-color: #f20d0d;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #deposit-button:hover {
+            background-color: #140505a0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>NẠP TIỀN VÀ QUẢN LÝ SỐ DƯ</h1>
+    </header>
+    <section>
+        <h2>Nhập số tiền bạn muốn nạp:</h2>
+        <form id="naptienForm">
+            <input type="number" id="amount" name="amount" placeholder="Nhập số tiền" required>
+            <button type="submit">Nạp tiền</button>
+        </form>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Lấy dữ liệu từ Local Storage
+            var userId = localStorage.getItem('userId');
+            var userBalance = localStorage.getItem('balance-' + userId);
+
+            // Nếu có số dư, hiển thị nó
+            if (userBalance !== null) {
+                document.getElementById('balance-on-another-page').textContent = parseFloat(userBalance).toLocaleString() + ' Đồng';
+            }
+        });
+
+        document.getElementById('naptienForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngăn chặn gửi biểu mẫu mặc định
+
+            // Lấy giá trị số tiền từ người dùng
+            var amount = parseFloat(document.getElementById('amount').value);
+
+            if (isNaN(amount) || amount <= 0) {
+                alert('Vui lòng nhập một số tiền hợp lệ.');
+                return;
+            }
+
+            // Lấy userId từ Local Storage
+            var userId = localStorage.getItem('userId');
+
+            // Lấy số dư hiện tại của tài khoản từ Local Storage
+            var currentBalance = localStorage.getItem('balance-' + userId) ? parseFloat(localStorage.getItem('balance-' + userId)) : 0;
+
+            // Cộng thêm số tiền nạp vào số dư hiện tại
+            var newBalance = currentBalance + amount;
+
+            // Lưu số dư mới vào Local Storage
+            localStorage.setItem('balance-' + userId, newBalance);
+
+            // Hiển thị số dư mới
+            document.getElementById('balance-on-another-page').textContent = newBalance.toLocaleString() + ' Đồng';
+
+            alert('Nạp tiền thành công. Số dư mới của bạn là: ' + newBalance.toLocaleString() + ' Đồng');
+     
+});
+</script>
+</body>
+</html>
+    <header>
+        <h1>SHOP QUẦN ÁO VŨ ĐẸP TRAI NƠI HỘI TỤ TINH HOA CỦA CUỘC SỐNG</h1>
+    </header>
+
+<section1>
+    <p> NẠP TIỀN QUA NGÂN HÀNG</p>
+
+    
+    </section1>
+
+    <article>
+        <img src="qr5.jpg" alt="Ảnewwwwwwwwwwwwwwwwwh mới">
+        <img src="qr3.jpg   " alt="Ảnewwwwwwwwwwwwwwwwwh mới">
+        <p>
+           
+        </p>
+    </article>
+    <section>
+        <p>quét QR tại đây  </p>
+    </section>
+
+    <section1>
+        <a href="../banhang.html">
+            <button>quay lại</button>
+        </a>
+    </section1>
+    
+
+  <!-- Thêm vào trang HTML của bạn -->
+  <script>
+    document.getElementById('naptienForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Ngăn chặn gửi biểu mẫu mặc định
+
+        // Lấy giá trị số tiền từ người dùng
+        var amount = parseFloat(document.getElementById('amount').value);
+
+        if (isNaN(amount) || amount <= 0) {
+            alert('Vui lòng nhập một số tiền hợp lệ.');
+            return;
+        }
+
+        // Lấy số dư hiện tại từ Local Storage
+        var currentBalance = localStorage.getItem('balance') ? parseFloat(localStorage.getItem('balance')) : 0;
+
+        // Cộng thêm số tiền nạp vào số dư hiện tại
+        var newBalance = currentBalance + amount;
+
+        // Lưu số dư mới vào Local Storage
+        localStorage.setItem('balance', newBalance);
+
+        // Chuyển hướng về trang chính
+        window.location.href = '../banhang.html';
+    });
+</script>   
+
+</body>
+</html>

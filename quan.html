@@ -1,0 +1,159 @@
+<!-- mua_hang.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Mua Hàng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-I/ox5nD+Ek7L2HAG7s6TNBC6Rqr8s6Y9C7odqxl56FP1T1lY6HVIdkZYSKkCnH18nWuAqHIuA4T37jrSZsjabg==" crossorigin="anonymous" />
+    <style>
+       body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #9d2525;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 80px; /* Khoảng cách dưới section */
+        }
+
+        article {
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(220, 23, 23, 0.1);
+    display: flex; /* Thêm thuộc tính flex */
+}
+article2 {
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(220, 23, 23, 0.1);
+    display: flex; /* Thêm thuộc tính flex */
+}
+
+article img {
+    width: 50%; /* Đặt chiều rộng ảnh là 50% để hiển thị 2 ảnh trên một dòng */
+    height: 100%;
+}
+
+article h2,
+article p,
+article button {
+    width: 50%; /* Đặt chiều rộng của phần nội dung là 50% để kết hợp với ảnh */
+    box-sizing: border-box; /* Giữ nguyên chiều rộng tổng cộng với padding và border */
+    padding: 10px;
+}
+
+article button {
+    border-radius: 0 5px 5px 0; /* Bo góc cho nút ở phía bên phải */
+}
+
+
+        article button:hover {
+            background-color: #140505a0;
+        }
+
+        footer {
+            background-color: #0f1411;
+            color: #8fd919;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.body.style.opacity = 1;
+
+        // Xử lý sự kiện khi nút "Thêm vào Giỏ Hàng" được nhấn
+        document.querySelectorAll('.add-to-cart-button').forEach(function (button) {
+            button.addEventListener('click', addToCart);
+        });
+
+        function addToCart(event) {
+            // Lấy thông tin sản phẩm từ phần tử cha của nút được nhấn
+            var productContainer = event.target.closest('article');
+            var productName = productContainer.querySelector('h2').textContent;
+
+            // Thực hiện các hành động thêm sản phẩm vào giỏ hàng tại đây
+            // Ví dụ: chuyển hướng đến trang giỏ hàng tương ứng
+            if (productName === "Chi Tiết Sản Phẩm 1") {
+                window.location.href = 'giohang/giohang8.html';
+            } else if (productName === "Chi Tiết Sản Phẩm 2") {
+                window.location.href = 'giohang/giohang9.html';
+            } else if (productName === "Chi Tiết Sản Phẩm 3") {
+                window.location.href = 'giohang/giohang6.html';
+            }
+            else if (productName === "Chi Tiết Sản Phẩm 4") {
+                window.location.href = 'giohang/giohang10.html';
+            } else {
+                alert('Không thể xác định sản phẩm để thêm vào giỏ hàng.');
+            }
+        }
+    });
+</script>
+</head>
+<body>
+
+    <header>
+        <h1>Trang Mua Hàng <i class="fas fa-heart" style="color: #ff5252;"></i></h1>
+    </header>
+
+    <section>
+        <article>
+            <h2>Chi Tiết Sản Phẩm 1</h2>
+            <img src="5.jpg " alt="Áo Polo Vàng">
+            <p>Quần vải kẻ 3 sọc ống rộng đẹp dáng thể thao cho Nam Nữ.</p> <p>Giá: 250.000Đ</p>
+            <p></p>
+            <button class="add-to-cart-button">Mua</button>
+        </article>
+        <article>
+            <h2>Chi Tiết Sản Phẩm 2</h2>
+            <img src="quan/quan.jpg" alt="Quần Jeans ">
+            <p>Quần Jeans, baggy đen jean Nam ống suông.
+                </p>
+                <p>Giá: 200.000Đ</p>
+            <p></p>
+            <button class="add-to-cart-button">Mua</button>
+        </article>
+
+        <article>
+            <h2>Chi Tiết Sản Phẩm 3</h2>
+            <img src="ao/ao2.jpg" alt="Áo Gile phao Nữ Hot">
+            <p>Áo Gile phao nữ hot nhất mua thu đông.</p>
+            <p>Giá: 300.000Đ</p>
+            <button class="add-to-cart-button">Mua</button>
+        </article>
+
+        <article>
+            <h2>Chi Tiết Sản Phẩm 4</h2>
+            <img src="ao/ao3.jpg" alt="Áo Hoodi đẹp thời trang">
+            <p>Áo Hoodi thời trang thu đông siêu dày.</p>
+            <p>Giá: 350.000Đ</p>
+            <button class="add-to-cart-button">Mua</button>
+        </article>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Shop Quần Áo. Của Vũ.</p>
+    </footer>
+
+</body>
+</html>

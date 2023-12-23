@@ -37,7 +37,9 @@
 
         article img {
             width: 100%;
-            height: auto;
+    height: auto;
+    image-rendering: -webkit-optimize-contrast; 
+    image-rendering: optimizeQuality;
         }
 
         article h2 {
@@ -83,7 +85,7 @@
 
             function addToCart() {
                 // Thực hiện các hành động thêm sản phẩm vào giỏ hàng tại đây
-                // Ví dụ: chuyển hướng đến trang giỏ hàng
+               
                 window.location.href = 'giohang2.html';
             }
         });
@@ -98,8 +100,8 @@
     <section>
         <article>
             <h2>Chi Tiết Sản Phẩm</h2>
-            <img src="1.jpg" alt="Áo Polo Vàng">
-            <p>Áo polo vàng thời trang, phong cách và thoáng khí.</p>
+            <img src="5.jpg" alt="Quần Jean nam">
+            <p>Quần jean nam phong cách, thoải mái và bền bỉ</p>
             <p>Giá: $25.99</p>
             <button class="add-to-cart-button">Thêm vào Giỏ Hàng</button>
         </article>
