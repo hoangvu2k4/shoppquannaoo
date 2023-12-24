@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00695c;
+        }
+
+        .cart-container {
+            max-width: 900px; /* Tăng kích thước của container */
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 88px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+            margin-bottom: 100px;
+        }
+
+        .cart-item img {
+            max-width: 500px;
+            margin-right: -40px;
+            border-radius: 4px;
+        }
+
+        .order-summary {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .order-summary h2 {
+            color: #00695c;
+        }
+
+        .order-summary p {
+            margin: 5px 0;
+        }
+
+        .order-completed {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .order-completed h2 {
+            color: #00695c;
+        }
+
+        .order-completed p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Giỏ Hàng</h1>
+
+    <div class="cart-container">
+        <!-- Sản phẩm trong giỏ hàng -->
+        <div class="cart-item">
+            <img src="ao/ao3.jpg" alt="Giày">
+            <div>
+                <h3 style="color: #00695c;">Giày siêu rẻ</h3>
+                <p>Giá: 343.000Đ</p>
+            </div>
+        </div>
+
+        <!-- Thêm các sản phẩm khác tại đây -->
+
+        <!-- Tổng giá trị đơn hàng -->
+        <div class="order-summary">
+            <h2>Tổng Giá Trị Đơn Hàng</h2>
+            <p style="color: #00695c;">Số sản phẩm: 1</p>
+            <p style="color: #00695c;">Tổng tiền: 343.000Đ</p>
+        </div>
+
+        <!-- Thông báo hoàn thành giao dịch -->
+        <div class="order-completed">
+            <h2 style="color: #00695c;">Đơn Hàng Đã Hoàn Thành</h2>
+            <p>Cảm ơn bạn đã mua sắm tại cửa hàng của chúng tôi!</p>
+        </div>
+        
+    </div>
+
+</body>
+</html>
