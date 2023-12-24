@@ -44,13 +44,30 @@
                 color: #460ed3;
                 display: flex;
                 flex-wrap: wrap;
-                box-shadow: 0 0 20px rgba(174, 7, 7, 0.1);
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
                 justify-content: space-around; /* Dùng để căn giữa các ô trong mỗi hàng */
                 padding: 10px;
                 text-align: center;
-                margin-bottom: 50px;
+                margin-bottom: 40px;
                 width: 10%;
             }
+            section2 {
+    color: #460ed3;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 0 20px rgba(247, 246, 246, 0.1);
+    justify-content: flex-end;
+   
+    align-items: flex-start;
+    padding: 0px;
+    text-align: center;
+    margin-top: -60px; /* Điều chỉnh khoảng cách giữa section2 và phần trên cùng của trang */
+
+    margin-bottom: 5px;
+    width: 90%;
+}
+
+
 
             article {
                 width: 40%;
@@ -123,9 +140,13 @@
             </a>
             <p></p>
              <section id="balance-on-another-page">
-                <p>Số dư tiền mua hàng: <span id="balance">0 Đồng</span></p>
+                <p> <span id="balance">0 Đồng</span></p>
             </section>
+            
         </section1>
+        <section2>
+            <button onclick="logout()">Đăng Xuất</button>
+        </section2>
         
         <section id="search-form">
             <form id="searchForm">
@@ -267,6 +288,13 @@
                     alert('Không tìm thấy kết quả cho từ khóa: ' + searchTerm);
                 }
             });
+            function logout() {
+            // Xử lý đăng xuất
+            localStorage.removeItem('userId');
+            alert('Bạn đã đăng xuất thành công.');
+            // Chuyển hướng về trang đăng nhập hoặc trang chính
+            window.location.href = 'index.html';
+        }
         </script>   
 
     </body>
